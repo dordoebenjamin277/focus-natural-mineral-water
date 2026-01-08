@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Natural Mineral Water</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/233256852699?text=Hello%20Focus%20Natural%20Mineral%20Water.%20I%20want%20to%20place%20an%20order."
+   class="whatsapp" target="_blank">
+💬
+</a>
+
+<header class="hero">
+  <img src="images/logo.jpg" class="logo" alt="Focus Logo">
+  <h1>Focus Natural Mineral Water</h1>
+  <p><strong>Refresh Yourself</strong></p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#products">Products</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    Focus Natural Mineral Water is produced under hygienic conditions to ensure
+    clean, safe, and refreshing drinking water for homes, offices, and events.
+  </p>
+</section>
+
+<section id="products">
+  <h2>Our Products</h2>
+  <ul>
+    <li>500ml Sachet Water</li>
+    <li>Bottled Mineral Water</li>
+    <li>19L & 20L Gallon Water</li>
+  </ul>
+</section>
+
+<section id="gallery">
+  <h2>Our Gallery</h2>
+  <div class="gallery">
+    <img src="images/gallon1.jpg" alt="Water gallons">
+    <img src="images/gallon2.jpg" alt="Delivery water">
+    <img src="images/sachet.jpg" alt="Sachet water">
+    <img src="images/stock.jpg" alt="Water stock">
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p><strong>Phone:</strong> 0256852699 / 0206503092</p>
+
+  <form>
+  <form onsubmit="sendToWhatsApp(); return false;">
+  <input type="text" id="name" placeholder="Customer Name" required>
+  <input type="tel" id="phone" placeholder="Phone Number" required>
+
+  <select id="product">
+    <option>Sachet Water</option>
+    <option>Bottled Water</option>
+    <option>Gallon Water (19L / 20L)</option>
+  </select>
+
+  <textarea id="address" placeholder="Delivery Address" required></textarea>
+
+  <button type="submit">Place Order</button>
+</form>
+
+<script>
+function sendToWhatsApp() {
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let product = document.getElementById("product").value;
+  let address = document.getElementById("address").value;
+
+  let message =
+    "NEW WATER ORDER%0A" +
+    "Name: " + name + "%0A" +
+    "Phone: " + phone + "%0A" +
+    "Product: " + product + "%0A" +
+    "Address: " + address;
+
+  let whatsappNumber = "233256852699";
+  window.open("https://wa.me/" + whatsappNumber + "?text=" + message, "_blank");
+}
+</script>
+ </section>
+
+<footer>
+  <p>&copy; 2026 Focus Natural Mineral Water. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
